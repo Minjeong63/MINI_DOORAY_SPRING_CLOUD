@@ -1,0 +1,37 @@
+### 계정 등록
+POST localhost:8081/register
+Content-Type: application/json
+
+{
+ "userId": "lsj123",
+  "password": "123456",
+  "email": "lsj457@naver.com",
+  "status": "REGISTERED"
+}
+
+### 계정 탈퇴처리
+PATCH localhost:8081/accounts
+Content-Type: application/json
+accountId: 1
+
+{
+  "status": "WITHDRAWN"
+}
+
+### 계정 휴면처리
+PATCH localhost:8081/accounts
+Content-Type: application/json
+accountId: 1
+
+{
+  "status": "INACTIVE"
+}
+
+### 사용자 아이디로 계정 정보 조회
+GET localhost:8081/accounts/lsj123
+Content-Type: application/json
+
+### 계정 아이디로 계정 정보 조회
+GET localhost:8081/accounts
+Content-Type: application/json
+accountId: 1
