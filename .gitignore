@@ -1,0 +1,30 @@
+# IntelliJ 관련 파일들
+.idea/
+*.iml
+
+# Maven 또는 Gradle 빌드 디렉토리
+target/
+build/
+
+# 로그 파일
+*.log
+
+# 스프링 부트 관련 파일
+*.jar
+*.war
+
+# 환경 설정 파일 (사용자마다 다를 수 있는 파일들)
+application*.properties
+application*.yml
+
+# OS 별로 생길 수 있는 파일들
+.DS_Store
+Thumbs.db
+
+# 테스트 결과 및 리포트
+test-output/
+surefire-reports/
+
+# Maven 관련
+.mvn/
+/account-server/

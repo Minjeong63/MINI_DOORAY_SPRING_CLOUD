@@ -31,39 +31,14 @@ public class RouteLocatorConfig {
         return builder.routes()
                 .route("register_route",
                         r -> r.path("/register")
-//                                .and().weight("register", 50)
-                                .uri("http://localhost:8081"))
+s                                .uri("http://localhost:8081"))
                 .route("accounts",
                         r -> r.path("/accounts/**")
                                 .uri("http://localhost:8081")
                 )
-
                 .route("task",
                         r -> r.path("/projects/**")
                                 .uri("http://localhost:8082"))
-//                .route()
-
                 .build();
-
-//        return builder.routes()
-//                .route("hello-service-a",
-//                        p->p.path("/hello").and().weight("account",50).uri("http://192.168.71.59:8081/")
-//                        )
-//                .route("hello-service-b",
-//                        p->p.path("/hello").and().weight("account",50).uri("http://192.168.71.59:8082/")
-//                        )
-//                .build();
-
-//        return builder.routes()
-//                .route("get_route", r -> r.path("/account")
-//                        .filters(o->o.addRequestHeader("uuid", UUID.randomUUID().toString()))
-//                        .uri("http://httpbin.org"))
-//                .build();
-
-        //http://httpbin.org/get
-
-
-
-
     }
 }
