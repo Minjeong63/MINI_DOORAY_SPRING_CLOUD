@@ -1,0 +1,31 @@
+### milestone 등록
+POST localhost:8080/projects/1/milestones
+Content-Type: application/json
+
+{
+  "progress": "UI 설계"
+}
+
+### milestone 조회
+GET localhost:8080/projects/1/milestones
+Content-Type: application/json
+
+### milestone 수정
+PUT localhost:8080/projects/1/milestones/1
+Content-Type: application/json
+
+{
+  "progress": "데이터베이스 설계 완료"
+}
+
+### milestone 수정 잘못된 milestone id
+PUT localhost:8080/projects/1/milestones/1234
+Content-Type: application/json
+
+{
+  "progress": "데이터베이스 설계 완료"
+}
+
+### milestone 삭제
+DELETE localhost:8080/projects/1/milestones/1
+Content-Type: application/json

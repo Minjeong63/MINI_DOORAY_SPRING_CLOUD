@@ -1,0 +1,36 @@
+### Task 등록 (새로운 Task 등록)
+POST http://localhost:8082/projects/1/tasks
+Content-Type: application/json
+accountId: 100
+
+{
+  "projectId": 1,
+  "milestoneId": null,
+  "taskContent": "새로운 작업 내용"
+}
+
+###
+
+### Task 목록 조회
+GET http://localhost:8082/projects/1/tasks
+Content-Type: application/json
+accountId: 100
+
+###
+
+### Task 수정
+PUT http://localhost:8082/projects/1/tasks/1
+Content-Type: application/json
+accountId: 100
+
+{
+  "milestoneId": null,
+  "taskContent": "수정된 작업 내용"
+}
+
+###
+
+### Task 삭제
+DELETE http://localhost:8082/projects/1/tasks/1
+Content-Type: application/json
+accountId: 100
